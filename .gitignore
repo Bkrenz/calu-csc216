@@ -256,3 +256,7 @@ TSWLatexianTemp*
 
 # standalone packages
 *.sta
+
+# ignore doc files
+*.doc
+*.docx
