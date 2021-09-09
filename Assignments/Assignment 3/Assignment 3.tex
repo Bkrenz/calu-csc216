@@ -1,0 +1,225 @@
+\documentclass[12pt]{article}
+
+\title{Group Homework 3}
+\author{G2 - Robert Krency, Austin Pringle, Anthony Stepich}
+\date{\today}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+% Geometry 
+\usepackage{geometry}
+\geometry{letterpaper, left=15mm, top=20mm, right=15mm, bottom=20mm}
+
+% Add vertical spacing to tables
+\renewcommand{\arraystretch}{1.4}
+
+% Macros
+\newcommand{\definition}[1]{\underline{\textbf{#1}}}
+
+% Begin Document
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+     \item $604.124_{8}$ to base $12 = \boxed{284.1B7_{12}}$ \\ \\
+     $ = 6 \times 8^2 + 0 \times 8^1 + 4 \times 8^0 + 1 \times 8^{-1} + 2 \times 8^{-2} + 4 \times 8^{-3} = 388.1340625_{10}$ \\\\
+     \begin{tabular}{l | l | l}
+         
+
+        $\begin{aligned}
+            n \geq 3log_{12}8 \\
+            n = 3 \\
+        \end{aligned}$
+
+        &
+
+        \begin{tabular}{r c l l}
+            $388 \div 12$ & $=$ & $32$ & $R4$ \\
+            $32 \div 12$  & $=$ & $2$ & $R8$  \\
+            $2 \div 12$   & $=$ & $0$ & $R2$  \\
+        \end{tabular}
+
+        &
+
+        \begin{tabular}{r c l l}
+            $12 \times .1640625$ & $=$ & $1 + .96875$ & \\
+            $12 \times .96875$ & $=$ & $11 + .6142$ & \\
+            $12 \times .6142$ & $=$ & $7 + .3704$ & round up \\
+        \end{tabular}
+        
+
+     \end{tabular}
+
+     \item $374.24_{13}$ to base $8 = \boxed{1132.133_{8}}$ \\ \\
+     $ = 3 \times 13^2 + 7 \times 13^1 + 4 \times 13^0 + 2 \times 13^{-1} + 4 \times 13^{-2} = 602.177514792_{10}$ \\\\
+     \begin{tabular}{l | l | l}
+         
+
+        $\begin{aligned}
+            n \geq 2log_{8}13 \\
+            n = 3 \\
+        \end{aligned}$
+
+        &
+
+        \begin{tabular}{r c l l}
+            $602 \div 8$ & $=$ & $75$ & $R2$ \\
+            $75 \div 8$  & $=$ & $9$ & $R3$  \\
+            $9 \div 8$   & $=$ & $1$ & $R1$  \\
+            $1 \div 8$   & $=$ & $0$ & $R1$  \\
+        \end{tabular}
+
+        &
+
+        \begin{tabular}{r c l l}
+            $8 \times .177514792$ & $=$ & $1 + .420118336$ & \\
+            $8 \times .420118336$ & $=$ & $3 + .360946688$ & \\
+            $8 \times .360946688$ & $=$ & $2 + .887573504$ & round up \\
+        \end{tabular}
+        
+
+     \end{tabular}
+
+     \item $3A4.24_{16}$ to base $5 = \boxed{12212.0323_{5}}$ \\ \\
+     $ = 3 \times 16^2 + 10 \times 16^1 + 4 \times 16^0 + 2 \times 16^{-1} + 4 \times 16^{-2} = 932.140625_{10}$ \\\\
+     \begin{tabular}{l | l | l}
+         
+
+        $\begin{aligned}
+            n \geq 2log_{5}16 \\
+            n = 4 \\
+        \end{aligned}$
+
+        &
+
+        \begin{tabular}{r c l l}
+            $932 \div 5$ & $=$ & $75$ & $R2$ \\
+            $186 \div 5$  & $=$ & $37$ & $R1$  \\
+            $37 \div 5$   & $=$ & $7$ & $R2$  \\
+            $7 \div 5$   & $=$ & $1$ & $R2$  \\
+            $1 \div 5$   & $=$ & $0$ & $R1$  \\
+        \end{tabular}
+
+        &
+
+        \begin{tabular}{r c l l}
+            $5 \times .140625$ & $=$ & $0 + .703125$ & \\
+            $5 \times .703125$ & $=$ & $3 + .515625$ & \\
+            $5 \times .515625$ & $=$ & $2 + .578125$ & \\
+            $5 \times .578125$ & $=$ & $2 + .890625$ & round up \\
+        \end{tabular}
+        
+     \end{tabular}
+
+     \pagebreak
+
+     \item $427.2B_{14}$ to base $6 = \boxed{3443.111_{6}}$ \\ \\
+     $ = 4 \times 14^2 + 2 \times 14^1 + 7 \times 14^0 + 2 \times 14^{-1} + 11 \times 14^{-2} = 819.198979591_{10}$ \\\\
+     
+        \begin{tabular}{l | l | l} 
+
+        $\begin{aligned}
+            n \geq 2log_{6}14 \\
+            n = 3 \\
+        \end{aligned}$
+
+        &
+
+        \begin{tabular}{r c l l}
+            $819 \div 6$  & $=$ & $136$ & $R3$ \\
+            $136 \div 6$  & $=$ & $22$ & $R4$  \\
+            $22 \div 6$   & $=$ & $3$  & $R4$  \\
+            $3 \div 6$    & $=$ & $0$  & $R3$  \\
+        \end{tabular}
+
+        &
+
+        \begin{tabular}{r c l l}
+            $6 \times .198979591$ & $=$ & $1 + .193877551$  & \\
+            $6 \times .193877551$ & $=$ & $1 + .163265306$  & \\
+            $6 \times .163265306$ & $=$ & $0 + .9795991836$ & round up \\
+        \end{tabular}
+        
+     \end{tabular}
+
+     \item $344.12_{5}$ to base $20 = \boxed{4J.A8_{20}}$ \\ \\
+     $ = 3 \times 5^2 + 4 \times 5^1 + 4 \times 5^0 + 1 \times 5^{-1} + 2 \times 5^{-2} = 99.52_{10}$ \\\\
+     
+        \begin{tabular}{l | l | l} 
+
+        $\begin{aligned}
+            n \geq 2log_{20}5 \\
+            n = 2 \\
+        \end{aligned}$
+
+        &
+
+        \begin{tabular}{r c l l}
+            $99 \div 20$  & $=$ & $4$ & $R19$ \\
+            $4 \div 20$  & $=$ & $0$ & $R4$  \\
+        \end{tabular}
+
+        &
+
+        \begin{tabular}{r c l l}
+            $20 \times .52$ & $=$ & $10 + .4$  & \\
+            $20 \times .4$ & $=$ & $8 + 0.0$  & round down\\
+        \end{tabular}
+        
+     \end{tabular}
+
+     \item $3B74.2C4_{18}$ to base $9 = \boxed{32054.1304_{9}}$ \\ \\
+     $ = 3 \times 18^3 + 11 \times 18^2 + 7 \times 18^1 + 4 \times 18^0 + 2 \times 18^{-1} + 12 \times 18^{-2} + 4 \times 18^{-3}$ \\
+     $ = 21190.148834019_{10}$ \\\\
+     
+        \begin{tabular}{l | l | l} 
+
+        $\begin{aligned}
+            n \geq 3log_{9}18 \\
+            n = 4 \\
+        \end{aligned}$
+
+        &
+
+        \begin{tabular}{r c l l}
+            $21190 \div 9$  & $=$ & $2354$ & $R4$ \\
+            $2354 \div 9$   & $=$ & $261$ & $R5$  \\
+            $261 \div 9$    & $=$ & $29$ & $R0$  \\
+            $29 \div 9$     & $=$ & $3$ & $R2$  \\
+            $3 \div 9$      & $=$ & $0$ & $R3$  \\
+        \end{tabular}
+
+        &
+
+        \begin{tabular}{r c l l}
+            $9 \times .148834019$ & $=$ & $1 + .339506171$  & \\
+            $9 \times .339506171$ & $=$ & $3 + .055555539$  & \\
+            $9 \times .055555539$ & $=$ & $0 + .499999851$  & \\
+            $9 \times .499999851$ & $=$ & $4 + .499998659$  & round down\\
+        \end{tabular}
+        
+     \end{tabular}
+
+
+     \item $120221_3$ to base $9$ 
+     $= \boxed{527_9}$
+
+     \item $322.14_8$ to base $4$ \\
+     $= 011 010 010 . 001 100_2$ \\
+     $= \boxed{3102.030_4}$
+
+     \item $374.24_9$ to base $27$ \\
+     $= 102111.021100_3 $ \\
+     $= \boxed{BD.79_{27}}$
+
+     \item $3112.22_4$ to base $16$
+     $= \boxed{D6.A_{16}}$
+
+\end{enumerate}
+
+\end{document}

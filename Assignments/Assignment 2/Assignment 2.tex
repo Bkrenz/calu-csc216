@@ -1,0 +1,225 @@
+\documentclass[12pt]{article}
+
+\title{Group Homework 1}
+\author{G2 - Robert Krency, Austin Pringle, Anthony Stepich}
+\date{\today}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+% Geometry 
+\usepackage{geometry}
+\geometry{letterpaper, left=15mm, top=20mm, right=15mm, bottom=20mm}
+
+% Add vertical spacing to tables
+\renewcommand{\arraystretch}{1.4}
+
+% Macros
+\newcommand{\definition}[1]{\underline{\textbf{#1}}}
+
+% Begin Document
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+     \item $0.24_{8}$ to base $10$ \\ \\
+     \begin{tabular}{l | l}
+         
+        $\begin{aligned}
+            n \geq 2log_{10}8 \\
+            n = 2 \\
+        \end{aligned}$
+
+        &
+
+        $\begin{aligned}
+            = \frac{2}{8^1} + \frac{4}{8^2} \\
+            = \boxed{.31_{10}} \\
+        \end{aligned}$
+
+     \end{tabular}
+     
+
+     \item $0.24_{10}$ to base $8$ \\ \\
+     \begin{tabular}{l | l}
+
+        $\begin{aligned}
+            n \geq 2log_{8}10 \\
+            n = 3 \\
+        \end{aligned}$
+
+        &
+
+        $\begin{aligned}
+            8 \times .24 = 1 + .92 \\
+            8 \times .92 = 7 + .36 \\
+            8 \times .36 = 2 + .88 \\ 
+            8 \times .88 = 7 + .04 \\
+            \boxed{.173_{8}}
+        \end{aligned}$
+
+     \end{tabular}
+     
+
+     \item $0.24_{12}$ to base $10$ \\ \\
+     \begin{tabular}{l | l}
+
+        $\begin{aligned}
+            n \geq 2log_{10}12 \\
+            n = 3 \\
+        \end{aligned}$
+
+        &
+
+        $\begin{aligned}
+            = \frac{2}{12^1} + \frac{4}{12^2} \\
+            = \boxed{.194_{12}}
+        \end{aligned}$
+
+     \end{tabular}
+     
+
+     \item $0.2B_{13}$ to base $10$ \\ \\
+     \begin{tabular}{l | l}
+
+        $\begin{aligned}
+            n \geq 2log_{10}13 \\
+            n = 3 \\
+        \end{aligned}$
+
+        &
+
+        $\begin{aligned}
+            = \frac{2}{13^1} + \frac{11}{13^2} \\
+            = \boxed{.219_{10}}
+        \end{aligned}$
+
+     \end{tabular}
+     
+
+     \item $0.12_{10}$ to base $20$ \\  \\
+     \begin{tabular}{l | l}
+
+        $\begin{aligned}
+            n \geq 2log_{20}10 \\
+            n = 2 \\
+        \end{aligned}$
+
+        &
+
+        $\begin{aligned}
+            20 \times .12 = 2 + .4 \\
+            20 \times .4 = 8 + .00 \\
+            20 \times 0 = 0 \\
+            \boxed{.28_{20}}
+        \end{aligned}$
+
+     \end{tabular}
+     
+     \pagebreak
+
+     \item $0.14_{5}$ to base $10$ \\  \\
+     \begin{tabular}{l | l}
+
+        $\begin{aligned}
+            n \geq 2log_{5}10 \\
+            n = 3 \\
+        \end{aligned}$
+
+        &
+
+        $\begin{aligned}
+            = \frac{1}{5^1} + \frac{4}{5^2} \\
+            = \boxed{.360_{10}}
+        \end{aligned}$
+
+     \end{tabular}
+     
+
+     \item $0.24_{10}$ to base $27$ \\ \\
+     \begin{tabular}{l | l}
+
+        $\begin{aligned}
+            n \geq 2log_{27}10 \\
+            n = 2 \\
+        \end{aligned}$
+
+        &
+
+        $\begin{aligned}
+            27 \times .24 = 6 + .48 \\
+            27 \times .48 = 12 + .96 \\
+            27 \times .96 = 25 + .92 \\
+            \boxed{.6D_{27}}
+        \end{aligned}$
+
+     \end{tabular}
+     
+
+     \item $0.22_{4}$ to base $10$ \\ \\
+     \begin{tabular}{l | l}
+
+        $\begin{aligned}
+            n \geq 2log_{4}10 \\
+            n = 3 \\
+        \end{aligned}$
+
+        &
+
+        $\begin{aligned}
+            = \frac{2}{4^1} + \frac{2}{4^2} \\
+            = \boxed{.625_{10}}
+        \end{aligned}$
+
+     \end{tabular}
+     
+
+     \item $0.124_{10}$ to base $12$ \\ \\
+     \begin{tabular}{l | l}
+
+        $\begin{aligned}
+            n \geq 3log_{12}10 \\
+            n = 3 \\
+        \end{aligned}$
+
+        &
+
+        $\begin{aligned}
+            12 \times .124 = 1 + .488 \\
+            12 \times .488 = 5 + .856 \\
+            12 \times .856 = 10 + .272 \\
+            12 \times .272 = 3 + .264 \\
+            \boxed{.15A_{12}}
+        \end{aligned}$
+
+     \end{tabular}
+     
+
+     \item $0.204_{10}$ to base $9$ \\ \\
+     \begin{tabular}{l | l}
+
+        $\begin{aligned}
+            n \geq 3log_{9}10 \\
+            n = 4 \\
+        \end{aligned}$
+
+        &
+
+        $\begin{aligned}
+            9 \times .204 = 1 + .836 \\
+            9 \times .836 = 7 + .524 \\
+            9 \times .524 = 4 + .716 \\
+            9 \times .716 = 6 + .444 \\
+            9 \times .444 = 3 + .996 \\
+            \boxed{.1746_{9}}
+        \end{aligned}$
+
+     \end{tabular}
+
+\end{enumerate}
+
+\end{document}
