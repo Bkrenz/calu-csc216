@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+
+\title{Group Homework 5}
+\author{G2 - Robert Krency, Austin Pringle, Anthony Stepich}
+\date{\today}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{enumitem}
+
+% Geometry 
+\usepackage{geometry}
+\geometry{letterpaper, left=15mm, top=20mm, right=15mm, bottom=20mm}
+
+% Add vertical spacing to tables
+\renewcommand{\arraystretch}{2}
+
+% Macros
+\newcommand{\definition}[1]{\underline{\textbf{#1}}}
+
+% Begin Document
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+    \item Write the following numbers in 8 bit sign magnitude, one's compliment, and two's compliment.
+    \begin{tabularx}{\textwidth}{X X X X}
+
+         & \underline{SM} & \underline{1's Comp} & \underline{2's Comp} \\
+         -123 & 1111 1011 & 1000 0100 & 1000 0101 \\
+         +87 & 0101 0111 & 0101 0111 & 0101 0111 \\
+         -49 & 1011 0001 & 1100 1110 & 1100 1111 \\
+         -63 & 1011 1111 & 1100 0000 & 1100 0001 \\
+
+    \end{tabularx}
+
+    
+    \renewcommand{\arraystretch}{1.4}
+
+    \vspace{2cm}
+
+    \item Convert the following to 8bit two's complement numbers. Perform the operation. Identify if an overflow occurred or not. Convert the answer back to decimal.
+    \begin{enumerate}[label=\alph*)]
+
+        \item 120 + 67 \\
+        \begin{tabular}{l | l}
+            \begin{tabular}{c c c}
+
+                 & 0111 & 1000 \\
+                + & 0100 & 0011 \\ \hline 
+                & 1011 & 1011
+
+            \end{tabular} 
+
+            & 
+
+            $Carry_{in} \oplus Carry_{out} = 1 \oplus 0 = 1$ \\
+
+            $\rightarrow -69_{10}$
+
+             & Overflow has occurred. \\
+             
+             Incorrect & 
+        \end{tabular} 
+
+        \pagebreak
+        
+        \item -89 - 105 \\
+        \begin{tabular}{l | l}
+            \begin{tabular}{c c c c}
+
+                & 0000 & 1010 & 0111 \\
+                + & 0000 & 1001 & 0111 \\ \hline 
+                & 0001 & 0011 & 1110
+
+            \end{tabular} 
+
+            & 
+
+            $Carry_{in} \oplus Carry_{out} = 0 \oplus 1 = 1$ \\
+
+            $\rightarrow 62_{10}$
+
+             & Overflow has occurred. \\
+             
+             Incorrect & 
+        \end{tabular} 
+
+        \vspace{2cm}
+        \item -72 - 15 \\
+        \begin{tabular}{l | l}
+            \begin{tabular}{c c c c}
+
+                  & 1011 & 1000 \\
+                + & 1111 & 0001 \\ \hline 
+                  & 1010 & 1001
+
+            \end{tabular} 
+
+            & 
+
+            $Carry_{in} \oplus Carry_{out} = 1 \oplus 1 = 0$ \\
+
+            $\rightarrow -87_{10}$
+
+             & Overflow has not occurred. \\
+             
+             Correct & 
+        \end{tabular} 
+
+    \end{enumerate}
+     
+\end{enumerate}
+
+\end{document}
