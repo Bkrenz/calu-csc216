@@ -1,0 +1,155 @@
+\documentclass[12pt]{article}
+
+\title{Group Homework 6}
+\author{G2 - Robert Krency, Austin Pringle, Anthony Stepich}
+\date{\today}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{enumitem}
+
+% Geometry 
+\usepackage{geometry}
+\geometry{letterpaper, left=15mm, top=20mm, right=15mm, bottom=20mm}
+
+% Add vertical spacing to tables
+\renewcommand{\arraystretch}{2}
+
+% Macros
+\newcommand{\definition}[1]{\underline{\textbf{#1}}}
+
+% Begin Document
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+    %1
+    \item $f(X, Y, Z) = Y + X'Y'Z'$ \\
+    \begin{tabular}{r l l}
+        = & $Y + (X + Y + Z)'$ & \\
+        = & $((Y')(X + Y + Z))' $ & \\
+        = & $(Y'X + Y'Y + Y'Z)'$ & \\
+        = & $(Y'X + Y'Z)'$ & \\
+        = & $(Y'X)'(Y'Z)'$ & \\
+        = & $(Y + X')(Y + Z')$ & \\
+        = & $YY + YZ' + X'Y + X'Z'$ & \\
+        = & $Y(1 + Z' + X') + X'Z'$ & \\
+        = & $Y + X'Z'$ & \\
+    \end{tabular}
+    
+    \pagebreak
+    
+    %2
+    \item $f(X, Y, Z) = (X + Y)(X + Z)(Z + Y)$ \\
+    \begin{tabular}{r l}
+        = & $(XX + XZ + XY + YZ)(Z + Y)$ \\
+        = & $XZ + XY + XZY + YZ$ \\ 
+        = & $XZ + XY(1 + Z) + YZ$ \\
+        = & $XZ + XY + YZ$ \\ 
+    \end{tabular}
+
+    \vspace{20mm}
+
+    %3
+    \item $f(X, Y, Z) = X'Y' + X'Y + YZ' + XZ'$ \\
+    \begin{tabular}{r l l}
+        = & $X'(Y' + Y) + YZ' + XZ'$ & \\
+        = & $X' + YZ' + XZ'$ & \\
+        = & $((X)(XZ')'(YZ')')'$ &\\
+        = & $((X)(X' + Z)(Y' + Z))'$ &\\
+        = & $((X)(X'Y' + X'Z + Y'Z + ZZ))'$ & \\
+        = & $(XX'Y' + XX'Z + XY'Z + XZ)'$ & \\
+        = & $(XZ(Y' + 1))'$ & \\
+        = & $(XZ)'$ & \\
+        = & $X' + Z'$ & \\ 
+    \end{tabular}
+    
+    \pagebreak
+    
+    % 4
+    \item $f(W, X, Y, Z) = YW + X'YZ' + XZ'W + XYZ + X'ZW$ \\
+    \begin{tabular}{r l l}
+        = & $ $ & \\
+        = & $ $ & \\
+        = & $ $ & \\
+        = & $ $ & \\
+        = & $ $ & \\
+    \end{tabular}
+    
+    \pagebreak
+    
+    % 5
+    \item $f(X, Y, Z) = (X + Z)(X + Y')(Y + Z)$ \\
+    \begin{tabular}{r l l}
+        = & $(X + XY' + ZX + ZY')(Y + Z)$ & \\
+        = & $XY + XZ + XY'Y + XY'Z + ZXY + ZXZ + ZY'Y + ZY'Z$ & \\
+        = & $XY + XZ + XY'Z + XYZ + ZY'$ & \\
+        = & $XY + XZ + XZ(Y' + Y) + ZY'$ & \\
+        = & $XY + XZ + ZY'$ & \\
+    \end{tabular}
+    
+    \vspace{20mm}
+    
+    % 6
+    \item $f(W, X, Y, Z) = (W' + X')' (Y + Z)'$\\
+    \begin{tabular}{r l l}
+        = & $WX(Y+Z)'$ & \\
+        = & $WX(Y'Z')$ & \\
+        = & $WXY'Z'$ & \\
+    \end{tabular}
+    
+    \pagebreak
+    
+    %7
+    \item $f(X, Y, Z) = (X + Y)(X' + Y)(X + Y')(X' + Y')$ \\
+    \begin{tabular}{r l l}
+        = & $(XX' + XY + X'Y + YY)(XX' + XY' + X'Y' + Y'Y')$ & \\
+        = & $(XY + X'Y + Y)(XY' + X'Y' + Y')$ & \\
+        = & $Y(X + X' + 1)Y'(X + X' + 1)$ & \\
+        = & $YY'$ & \\
+        = & $0$ & \\
+    \end{tabular}
+    
+    \pagebreak
+    
+    %8
+    \item $f(A, B, C, D) = AB + A'C + B'CD$ \\
+    \begin{tabular}{r l l}
+        = & $ $ & \\
+        = & $ $ & \\
+        = & $ $ & \\
+        = & $ $ & \\
+        = & $ $ & \\
+    \end{tabular}
+    
+    \pagebreak
+    
+    %9
+    \item $f(A, B, C, D) = AB + A'C + B'D + CD$ \\
+    \begin{tabular}{r l l}
+        = & $ $ & \\
+        = & $ $ & \\
+        = & $ $ & \\
+        = & $ $ & \\
+        = & $ $ & \\
+    \end{tabular}
+    
+    \pagebreak
+    
+    %10
+    \item $f(X, Y, Z) = (X'(XY'Z')')Z$ \\
+    \begin{tabular}{r l l}
+        = & $ $ & \\
+        = & $ $ & \\
+        = & $ $ & \\
+        = & $ $ & \\
+        = & $ $ & \\
+    \end{tabular}
+
+\end{enumerate}
+
+\end{document}

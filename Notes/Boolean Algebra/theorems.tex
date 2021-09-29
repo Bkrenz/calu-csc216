@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+
+
+\usepackage[english]{babel}
+
+\newtheorem{theorem}{Theorem}
+
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{enumitem}
+
+% Fancy Header
+\usepackage{fancyhdr}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{}
+\chead{CSC 216 - Logic \& Switching Theory}
+\lfoot{CALU Fall 2021}
+\rfoot{RDK}
+
+% Geometry 
+\usepackage{geometry}
+\geometry{letterpaper, left=15mm, top=20mm, right=15mm, bottom=20mm}
+
+% Add vertical spacing to tables
+\renewcommand{\arraystretch}{2}
+
+% Macros
+\newcommand{\definition}[1]{\underline{\textbf{#1}}}
+
+% Begin Document
+\begin{document}
+
+\section*{Boolean Algebra Theorems}
+
+\begin{theorem}
+    $X + XY = X$
+\end{theorem}
+
+\begin{theorem}
+    $X + X'Y = X + Y$
+\end{theorem}
+
+\begin{theorem}
+    $XY + X'Z + YZ = XY + X'Z$
+\end{theorem}
+
+\begin{theorem}
+    $X (X + Y) = X$
+\end{theorem}
+
+\begin{theorem}
+    $X (X' + Y) = XY$
+\end{theorem}
+
+\begin{theorem}
+    $(X + Y)(X + Y') = X$
+\end{theorem}
+
+\begin{theorem}
+    $(X + Y)(X' + Z) = XZ + X'Y$
+\end{theorem}
+
+\begin{theorem}
+    $(X + Y)(X' + Z)(Y + Z) = (X + Y)(X' + Z)$
+\end{theorem}
+
+\subsection*{DeMorgan's Theorems}
+
+\begin{enumerate}
+    \item Completement entire Expression
+    \item Complement each Term
+    \item Change operation from AND to OR or OR to AND
+\end{enumerate}
+
+\begin{theorem}
+    $(XYZ)' = X' + Y' + Z'$ 
+\end{theorem}
+
+\begin{theorem}
+    $(X + Y + Z)' = X'Y'Z'$
+\end{theorem}
+
+
+
+\end{document}
