@@ -73,11 +73,10 @@
     % 4
     \item $f(W, X, Y, Z) = YW + X'YZ' + XZ'W + XYZ + X'ZW$ \\
     \begin{tabular}{r l l}
-        = & $ $ & \\
-        = & $ $ & \\
-        = & $ $ & \\
-        = & $ $ & \\
-        = & $ $ & \\
+        = & $YW + Y(X'Z' + XZ) + W(XZ' + X'Z)$ & \\
+        = & $YW + Y(X'Z + XZ')' + W(XZ' + X'Z)$ & \\
+        = & $Y(X'Z + XZ')' + W(XZ' + X'Z)$ & Theorem 3 \\
+        = & $X'YZ' + XZ'W + XYZ + X'ZW$ & \\
     \end{tabular}
     
     \pagebreak
@@ -120,11 +119,13 @@
     %8
     \item $f(A, B, C, D) = AB + A'C + B'CD$ \\
     \begin{tabular}{r l l}
-        = & $ $ & \\
-        = & $ $ & \\
-        = & $ $ & \\
-        = & $ $ & \\
-        = & $ $ & \\
+        = & $AB(C + C')(D + D') + A'(B + B')C(D + D') + (A + A')B'CD$ & \\
+        = & $ABCD + ABC'D + ABCD + ABC'D' + A'BCD + A'B'CD + A'BCD' + A'B'CD' + AB'CD + A'B'CD$ & \\
+        = & $BCD + B'CD + ABC'D + ABC'D' + BCD' + A'B'CD' + A'B'CD$ & \\
+        = & $BD + ABC' + BC + A'B'C$ & \\
+        = & $BD + ABC' + BC(A + A') + A'B'C$ & \\
+        = & $BC + ABC' + ABC + A'BC + A'B'C$ & \\
+        = & $BD + AB + A'C$ & \\
     \end{tabular}
     
     \pagebreak
