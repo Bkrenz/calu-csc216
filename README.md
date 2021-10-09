@@ -1,5 +1,6 @@
 # Logic & Switching Theory
 CSC 216 - Dr. Pyzdrowski
+
 California University of Pennsylvania
 
 ### Assignments
