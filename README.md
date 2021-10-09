@@ -3,6 +3,11 @@ CSC 216 - Dr. Pyzdrowski
 
 California University of Pennsylvania
 
+### Notes
+
+- [Boolean Algebra Theorems](Notes/Boolean%20Algebra/out/theorems.pdf)
+
+
 ### Assignments
 
 Assignments were not corrected after submitting and may contain errors.
