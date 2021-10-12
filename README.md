@@ -19,4 +19,4 @@ Assignments are created in LaTeX and compiled to PDFs. Links below.
 - [Assignment 4](Assignments/Assignment%204/out/Assignment%204.pdf)
 - [Assignment 5](Assignments/Assignment%205/out/Assignment%205.pdf)
 - [Assignment 6](Assignments/Assignment%206/out/Assignment%206.pdf)
-- [Assignment 7](Assignments/Assignment%206/out/Assignment%207.pdf)
+- [Assignment 7](Assignments/Assignment%207/out/Assignment%207.pdf)
