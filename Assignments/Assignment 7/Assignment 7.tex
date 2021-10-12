@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+
+\title{Group Homework 7}
+\author{G2 - Robert Krency, Austin Pringle, Anthony Stepich}
+\date{\today}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{karnaugh-map}
+
+% Geometry 
+\usepackage{geometry}
+\geometry{letterpaper, left=15mm, top=20mm, right=15mm, bottom=20mm}
+
+% Add vertical spacing to tables
+\renewcommand{\arraystretch}{2}
+
+% Macros
+\newcommand{\definition}[1]{\underline{\textbf{#1}}}
+
+% Begin Document
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+   %1
+   \item f(wxyz) = $\sum_m(8,9,10,13,15) + \sum_\delta(0,4,6,12,14)$ = WY' + WXY + WYZ' \\
+       
+    \begin{karnaugh-map}*[4][4][1][$YZ$][$WX$]
+        \minterms{8,9,10,13,15}
+        \indeterminants{0,4,6,12,14}
+        \autoterms[0]
+        \implicant{12}{9}
+        \implicant{15}{14}
+        \implicant{14}{10}
+    \end{karnaugh-map}
+
+   %2
+   \item f(wxyz) = $\sum_m(5,9,14,15) + \sum_\delta(0,1,7,8,11-13)$ = WX + WY' + Y'Z\\
+   
+   \begin{karnaugh-map}*[4][4][1][$YZ$][$WX$]
+        \minterms{5,9,14,15}
+        \indeterminants{0,1,7,8,11,12,13}
+        \autoterms[0]
+        \implicant{12}{14}
+        \implicant{12}{9}
+        \implicant{1}{9}
+   \end{karnaugh-map}
+
+   \pagebreak
+
+   %3
+   \item f(wxyz) = $\sum_m(0,3,7,11,13) + \sum_\delta(2,4,6,12)$ = W'Y + W'Z + WXY' + X'YZ\\
+    \begin{karnaugh-map}*[4][4][1][$YZ$][$WX$]
+        \minterms{0,3,7,11,13}
+        \indeterminants{2,4,6,12}
+        \autoterms[0]
+        \implicant{3}{6}
+        \implicant{12}{13}
+        \implicantedge{0}{4}{2}{6}
+        \implicantedge{3}{3}{11}{11}
+    \end{karnaugh-map}
+
+
+   %4
+   \item f(wxyz) = $\sum_m(2,8,9,10-12) + \sum_\delta(3,6,13-15)$ = W + YZ'\\
+    \begin{karnaugh-map}*[4][4][1][$YZ$][$WX$]
+        \minterms{2,8,9,10,11,12}
+        \indeterminants{3,6,13,14,15}
+        \autoterms[0]
+        \implicant{12}{10}
+        \implicant{2}{10}
+    \end{karnaugh-map}
+
+\end{enumerate}
+
+\end{document}
