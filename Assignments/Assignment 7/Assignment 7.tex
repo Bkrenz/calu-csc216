@@ -41,14 +41,13 @@
     \end{karnaugh-map}
 
    %2
-   \item f(wxyz) = $\sum_m(5,9,14,15) + \sum_\delta(0,1,7,8,11-13)$ = WX + WY' + Y'Z\\
+   \item f(wxyz) = $\sum_m(5,9,14,15) + \sum_\delta(0,1,7,8,11-13)$ = WX + Y'Z\\
    
    \begin{karnaugh-map}*[4][4][1][$YZ$][$WX$]
         \minterms{5,9,14,15}
         \indeterminants{0,1,7,8,11,12,13}
         \autoterms[0]
         \implicant{12}{14}
-        \implicant{12}{9}
         \implicant{1}{9}
    \end{karnaugh-map}
 
