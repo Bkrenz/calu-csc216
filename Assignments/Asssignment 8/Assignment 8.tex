@@ -1,0 +1,353 @@
+\documentclass[12pt]{article}
+
+\title{Group Homework 8}
+\author{G2 - Robert Krency, Austin Pringle, Anthony Stepich}
+\date{\today}
+
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{enumitem}
+
+\usepackage[normalem]{ulem}
+
+% Geometry 
+\usepackage{geometry}
+\geometry{letterpaper, left=1in, top=1in, right=1in, bottom=1in}
+
+% Macros
+\newcommand{\definition}[1]{\underline{\textbf{#1}}}
+
+\newcommand{\encircle}[1]{%
+  \tikz[baseline=(X.base)] 
+    \node (X) [draw, shape=circle, inner sep=0] {\strut #1};}
+
+% Begin Document
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+    %1
+    \item f(wxyz) = $\sum_m(8,9,10,13,15) + \sum_\delta(0,4,6,12,14)$ = WX + WZ' + WY' \\
+    \begin{tabular}[t]{c c c}
+
+        \\
+
+        \begin{tabular}[t]{l l}
+
+             0 & 0000 \\ \hline
+             4 & 0100 \\
+             8 & 1000 \\ \hline
+             6 & 0110 \\ 
+             9 & 1001 \\
+            10 & 1010 \\
+            12 & 1100 \\ \hline
+            13 & 1101 \\
+            14 & 1110 \\ \hline
+            15 & 1111 \\
+
+        \end{tabular}
+
+        \hspace{8mm}
+
+        & 
+
+        \begin{tabular}[t]{l l}
+
+              0,4  & 0-00 \\
+              0,8  & -000 \\ \hline
+              4,6  & 01-0 \\
+              4,12 & -100 \\
+              8,9  & 100- \\
+              8,10 & 10-0 \\
+              8,12 & 1-00 \\ \hline
+              6,14 & -110 \\
+              9,13 & 1-01 \\
+             10,14 & 1-10 \\
+             12,13 & 110- \\
+             12,14 & 11-0 \\ \hline
+             13,15 & 11-1 \\
+             14,15 & 111- \\
+
+        \end{tabular}
+
+        \hspace{8mm}
+
+        &
+
+        \begin{tabular}[t]{l l}
+
+             0,4,8,12 & - - 0 0  \\ \hline
+             4,6,12,14 & - 1 - 0 \\
+             8,9,12,13 & 1 - 0 - \\
+             8,10,12,14 & 1 - - 0 \\ \hline
+             12,13,14,15 & 1 1 - - \\
+
+        \end{tabular}
+
+    \end{tabular}
+
+    \begin{tabular}{l | c | c c c c c}
+            & WXYZ & 8 & 9 & 10 & 13 & 15 \\ \hline
+        Y'Z' & - - 0 0 & \sout{X} & \\
+        XZ'  & - 1 - 0 & \\
+        WY'  & 1 - 0 - & \sout{X} & \encircle{X} & & \sout{X} & \\
+        WZ'  & 1 - - 0 & \sout{X} & & \encircle{X} \\
+        WX   & 1 1 - - & & & & \sout{X} & \encircle{X} \\
+    \end{tabular}
+    
+    \pagebreak
+
+    %2
+    \item f(wxyz) = $\sum_m(5,9,14,15) + \sum_\delta(0,1,7,8,11-13)$ = WX + Y'Z \\
+    \begin{tabular}[t]{c c c}
+
+        \\
+
+        \begin{tabular}[t]{l l}
+
+             0 & 0000 \\ \hline
+
+             1 & 0001 \\
+             8 & 1000 \\ \hline
+
+             5 & 0101 \\ 
+             9 & 1001 \\
+            12 & 1100 \\ \hline
+
+            7  & 0111 \\
+            11 & 1011 \\
+            13 & 1101 \\
+            14 & 1110 \\ \hline
+
+            15 & 1111 \\
+
+        \end{tabular}
+
+        \hspace{8mm}
+
+        & 
+
+        \begin{tabular}[t]{l l}
+
+              0,1  & 000- \\
+              0,8  & -000 \\ \hline
+
+              1,5  & 0-01 \\
+              1,9  & -001 \\
+              8,9  & 100- \\
+              8,12 & 1-00 \\ \hline
+
+              5,7  & 01-1 \\
+              5,13 & -101 \\
+              9,11 & 10-1 \\
+              9,13 & 1-01 \\
+             10,14 & 1-10 \\
+             12,13 & 110- \\
+             12,14 & 11-0 \\ \hline
+
+             7,15  & -111 \\
+             11,15 & 1-11 \\
+             13,15 & 11-1 \\
+             14,15 & 111- \\
+
+        \end{tabular}
+
+        \hspace{8mm}
+
+        &
+
+        \begin{tabular}[t]{l l}
+
+             0,1,8,9     & - 0 0 - \\ \hline
+             
+             1,5,9,13    & - - 0 1 \\
+             8,9,12,13   & 1 - 0 - \\ \hline
+
+             5,7,13,15   & - 1 - 1 \\ 
+             9,11,13,15  & 1 - - 1 \\
+             12,13,14,15 & 1 1 - - \\
+
+
+        \end{tabular}
+
+        \\
+
+    \end{tabular}
+
+    \begin{tabular}{l | c | c c c c}
+              & W X Y Z & 5 & 9 & 14 & 15 \\ \hline
+        WX    & 1 1 - - & & & \encircle{X} & \sout{X} \\
+        WZ    & 1 - - 1 & & \sout{X} & & \sout{X} \\ 
+        XZ    & - 1 - 1 & \sout{X} & & & \sout{X} \\
+        WY'   & 1 - 0 - & & \sout{X} \\
+        Y'Z   & - - 0 1 & \encircle{X} & \sout{X} \\
+        X'Y'  & - 0 0 - & & \sout{X} \\
+    \end{tabular}
+   
+
+
+    \pagebreak
+
+    %3
+    \item f(wxyz) = $\sum_m(0,3,7,11,13) + \sum_\delta(2,4,6,12)$ = W'Y + W'Z' + WXY' + X'YZ\\
+    \begin{tabular}[t]{c c c}
+
+        \\
+
+        \begin{tabular}[t]{l l}
+
+             0 & 0000 \\ \hline
+
+             2 & 0010 \\
+             4 & 0100 \\ \hline
+
+             3 & 0011 \\ 
+             6 & 0110 \\
+            12 & 1100 \\ \hline
+
+            7  & 0111 \\
+            11 & 1011 \\
+            13 & 1101 \\
+
+        \end{tabular}
+
+        \hspace{8mm}
+
+        & 
+
+        \begin{tabular}[t]{l l}
+
+              0,2  & 00-0 \\
+              0,4  & 0-00 \\ \hline
+
+              2,3  & 001- \\
+              2,6  & 0-10 \\
+              4,6  & 01-0 \\
+              4,12 & -100 \\ \hline
+
+              3,7  & 0-11 \\
+              3,11 & -011 \\
+              6,7  & 011- \\
+             12,13 & 110- \\
+
+        \end{tabular}
+
+        \hspace{8mm}
+
+        &
+
+        \begin{tabular}[t]{l l}
+
+             0,2,4,6     & 0 - - 0 \\ \hline
+             
+             2,3,6,7     & 0 - 1 - \\
+
+        \end{tabular}
+
+        \\
+
+    \end{tabular}
+
+    \begin{tabular}{l | c | c c c c c}
+              & W X Y Z & 0 & 3 & 7 & 11 & 13 \\ \hline
+        W'Z'  & 0 - - 0 & \encircle{X} \\
+        W'Y   & 0 - 0 - & & \sout{X} & \encircle{X} \\
+        XY'Z' & - 1 0 0 & \\
+        X'YZ  & - 0 1 1 & & \sout{X} & & \encircle{X} \\
+        WXY'  & 1 1 0 - & & & & & \encircle{X} \\
+    \end{tabular} 
+
+
+
+    \pagebreak
+
+    %4
+    \item f(wxyz) = $\sum_m(2,8,9,10-12) + \sum_\delta(3,6,13-15)$ = W + YZ' = W + X'Y\\
+    \begin{tabular}[t]{c c c}
+
+        \\
+
+        \begin{tabular}[t]{l l}
+
+             2 & 0010 \\
+             8 & 1000 \\ \hline
+
+             3 & 0011 \\ 
+             6 & 0110 \\
+             9 & 1001 \\
+            10 & 1010 \\
+            12 & 1100 \\ \hline
+
+            11 & 1011 \\
+            13 & 1101 \\
+            14 & 1110 \\ \hline
+
+            15 & 1111 \\
+
+        \end{tabular}
+
+        \hspace{8mm}
+
+        & 
+
+        \begin{tabular}[t]{l l}
+
+              2,3  & 001- \\
+              2,6  & 0-10 \\
+              2,10 & -010 \\
+              8,9  & 100- \\
+              8,12 & 1-00 \\ \hline
+
+              3,11 & -011 \\
+              6,14 & -110 \\
+              9,13 & 1-01 \\
+             10,11 & 101- \\
+             10,14 & 1-10 \\
+             12,13 & 110- \\
+             12,14 & 11-0 \\ \hline
+
+             11,15 & 1-11 \\
+             13,15 & 11-1 \\
+             14,15 & 111- \\
+
+        \end{tabular}
+
+        \hspace{8mm}
+
+        &
+
+        \begin{tabular}[t]{l l}
+
+             2,3,10,11 & - 0 1 - \\
+             2,6,10,14 & - - 1 0 \\
+             8,9,12,13 & 1 - 0 - \\
+             8,9,10,11 & 1 0 - - \\
+             9,11,13,15 & 1 - - 1 \\
+             12,13,14,15 & 1 1 - - \\ \hline
+
+             8,9,10,11,12,13,14,15 & 1 - - - \\
+
+        \end{tabular}
+
+        \\
+
+    \end{tabular}
+
+    \begin{tabular}{l | c | c c c c c c}
+              & W X Y Z & 2 & 8 & 9 & 10 & 11 & 12 \\ \hline
+        X'Y   & 0 - - 0 & \encircle{X} & & \sout{X} & \sout{X} \\
+        YZ'   & 0 - 0 - & \encircle{X} & & \sout{X} \\
+        WY'   & - 1 0 0 & & \sout{X} & & & & \sout{X} \\
+        WZ    & - 0 1 1 & & & \sout{X} & & \sout{X} \\
+        W     & 1 - - - & & \encircle{X} & \sout{X} & \sout{X} & \sout{X} & \sout{X} \\
+    \end{tabular} 
+   
+
+\end{enumerate}
+
+\end{document}
