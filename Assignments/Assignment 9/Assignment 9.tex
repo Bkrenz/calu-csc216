@@ -10,6 +10,7 @@
 \usepackage{tabularx}
 \usepackage{multicol}
 \usepackage{enumitem}
+\usepackage{karnaugh-map}
 
 \usepackage[normalem]{ulem}
 
@@ -72,8 +73,10 @@
 
     \end{tikzpicture}
 
+    \vspace{5mm}
+
     %2
-    \item Minimal State Table for the above sequence detector, beginning with state A. \\ \\
+    \item Minimal State Table \\ \\
 
     \begin{tabular}{ >{\centering}p{0.2\textwidth} p{0.2\textwidth} p{0.2\textwidth}}
 
@@ -94,24 +97,113 @@
     %3
     \item Transition Table \\ \\
 
-    \begin{tabular}{ l l l l | l l l l | l l l l}
+    \begin{tabular}{ l l l l | l l l | l l l}
 
-         &  & $X=0$ & $X=1$ & $X$ & $=$ & $0$ & & $X$ & $=$ & $0$ \\ 
-        P & abc  & NS,z & NS,z & Ja & Ka & Jb & Kb & Ja & Ka & Jb & Kb \\ \hline
+         &  & $X=0$ & $X=1$ & $X=0$ & & & $X=1$ \\ 
+        P & abc  & NS,z & NS,z & Ja Ka & Jb Kb & Jc Kc & Ja Ka & Jb Kb & Jc Kc \\ \hline
 
-        A  & 000 & 000,0 & 001,0 \\
-        B  & 001 & 100,0 & 010,0 \\
-        C  & 010 & 011,0 & 010,0 \\
-        D  & 011 & 000,0 & 101,1 \\
-        EH & 100 & 000,0 & 101,0 \\
-        FG & 101 & 100,1 & 010,0 \\
-           & 110 & xxx,x & xxx,x \\
-           & 111 & xxx,x & xxx,x 
+        A  & 000 & 000,0 & 001,0 & 0X & 0X & 0X & 0X & 0X & 1X \\
+
+        B  & 001 & 100,0 & 010,0 & 1X & 0X & X1 & 0X & 1X & X1 \\
+
+        C  & 010 & 011,0 & 010,0 & 0X & X1 & 1X & 0X & X0 & 0X \\
+
+        D  & 011 & 000,0 & 101,1 & 0X & X1 & X1 & 1X & X1 & X0 \\
+
+        EH & 100 & 000,0 & 101,0 & X1 & 0X & 0X & X0 & 0X & X1 \\
+
+        FG & 101 & 100,1 & 010,0 & X0 & 0X & X1 & X1 & 1X & X1 \\
+
+           & 110 & xxx,x & xxx,x & XX & XX & XX & XX & XX & XX \\
+           & 111 & xxx,x & xxx,x & XX & XX & XX & XX & XX & XX \\
 
     \end{tabular}
 
-    \vspace{2cm}
+    %4
 
+    \item Solving
+    
+    \begin{karnaugh-map}*[4][4][1][$cx$][$ab$]
+        \minterms{7,10}
+        \indeterminants{12,13,14,15}
+        \autoterms[0]
+        \implicant{7}{15}
+        \implicant{14}{10}
+    \end{karnaugh-map}
+
+    z = bcx + acx'
+    
+    \pagebreak
+    
+    \begin{tabular}{c | c}
+
+        Ja = bcx + b'cx' & Ka = c'x' + cx \\
+
+        \begin{karnaugh-map}*[4][4][1][$cx$][$ab$]
+            \minterms{2,7}
+            \indeterminants{8,9,10,11,12,13,14,15}
+            \autoterms[0]
+            \implicant{7}{15}
+            \implicantedge{2}{2}{10}{10}
+        \end{karnaugh-map}
+
+        & 
+
+        \begin{karnaugh-map}*[4][4][1][$cx$][$ab$]
+            \minterms{8,11}
+            \indeterminants{0,1,2,3,4,5,6,7,12,13,14,15}
+            \autoterms[0]
+            \implicant{0}{8}
+            \implicant{3}{11}
+        \end{karnaugh-map}
+
+        \\ \hline
+
+        Jb = cx & Kb = x + c \\
+
+        \begin{karnaugh-map}*[4][4][1][$cx$][$ab$]
+            \minterms{3,11}
+            \indeterminants{4,5,6,7,12,13,14,15}
+            \autoterms[0]
+            \implicant{3}{11}
+        \end{karnaugh-map}
+
+        & 
+
+        \begin{karnaugh-map}*[4][4][1][$cx$][$ab$]
+            \minterms{5,6,7}
+            \indeterminants{0,1,2,3,8,9,10,11,12,13,14,15}
+            \autoterms[0]
+            \implicant{1}{11}
+            \implicant{3}{10}
+        \end{karnaugh-map}
+
+        \\ \hline
+
+        Jc = b'x + bx' & Kc = b' + x' \\
+
+        \begin{karnaugh-map}*[4][4][1][$cx$][$ab$]
+            \minterms{1,4}
+            \indeterminants{2,3,6,7,9,10,11,12,13,14,15}
+            \autoterms[0]
+            \implicantedge{4}{12}{6}{14}
+            \implicantedge{1}{3}{9}{11}
+        \end{karnaugh-map}
+
+        & 
+
+        \begin{karnaugh-map}*[4][4][1][$cx$][$ab$]
+            \minterms{2,3,6,9,10,11}
+            \indeterminants{0,1,4,5,8,11,12,13,14,15}
+            \autoterms[0]
+            \implicantedge{0}{2}{8}{10}
+            \implicantedge{0}{8}{2}{10}
+        \end{karnaugh-map}
+
+
+
+            
+    \end{tabular}
 
 \end{enumerate}
 
